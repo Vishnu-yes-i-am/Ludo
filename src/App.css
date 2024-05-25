@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
   min-width: fit-content;
   flex-direction: column;
@@ -33,33 +33,39 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.button{
+.button {
   border-radius: 5px;
-  padding:5px;
+  padding: 5px;
   padding-inline: 15px;
   border: solid black 2px;
   box-shadow: 0 0 15px black;
   cursor: pointer;
   color: white;
 }
-.button:active{
+
+.button:active {
   transform: scale(0.99);
 }
-.button.red{
+
+.button.red {
   background-color: red;
 }
-.button.green{
+
+.button.green {
   background-color: green;
 }
-.button.blue{
+
+.button.blue {
   background-color: blue;
 }
-.button.disabled{
+
+.button.disabled {
   background-color: gray;
 }
 
@@ -67,7 +73,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px; /* adjust width as needed */
+  width: 120px;
+  /* adjust width as needed */
   height: 120px;
 }
 
@@ -76,20 +83,20 @@
   height: 34px;
   padding-top: 30px;
   /* background-color:transparent; */
-  position:absolute;
+  position: absolute;
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(5,15px);
+  grid-template-columns: repeat(5, 15px);
   justify-content: center;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .triangle-1 {
-  left:-32px;
-  top:32px;
+  left: -32px;
+  top: 32px;
   background-color: rgb(249, 91, 91);
   transform: rotate(90deg);
-  
+
 }
 
 .triangle-2 {
@@ -100,70 +107,72 @@
 
 .triangle-3 {
   transform: rotate(270deg);
-    background-color: rgb(107, 243, 107);
-    right: -30px;
-    top: 33px;
+  background-color: rgb(107, 243, 107);
+  right: -30px;
+  top: 33px;
 }
 
 .triangle-4 {
   transform: rotate(0deg);
-    background-color: rgb(243, 243, 116);
-    bottom: 0px;
-    left: -2px;
+  background-color: rgb(243, 243, 116);
+  bottom: 0px;
+  left: -2px;
 }
 
-#shake{
-  animation: shake 2s  infinite ;
+#shake {
+  animation: shake 2s infinite;
   /* animation-duration: 0.5s;
   animation-iteration-count: infinite; */
 }
 
 @keyframes shake {
 
-  0%{
-    transform: scale(1);
-    z-index: 550;
-  }
-  25%{
-    transform: scale(1.25);
-    z-index: 550;
-  }
-  50%{
-    transform: scale(1);
-    z-index: 550;
-  }
-  75%{
-    transform: scale(1.25);
-    z-index: 550;
-  }
-  100%{
+  0% {
     transform: scale(1);
     z-index: 550;
   }
 
-  
+  25% {
+    transform: scale(1.25);
+    z-index: 550;
+  }
+
+  50% {
+    transform: scale(1);
+    z-index: 550;
+  }
+
+  75% {
+    transform: scale(1.25);
+    z-index: 550;
+  }
+
+  100% {
+    transform: scale(1);
+    z-index: 550;
+  }
+
+
 }
 
-.playerName{
+.playerName {
   position: absolute;
   width: 100%;
 }
 
-.housesquare{
-  border:solid black 1px;
+.housesquare {
+  border: solid black 1px;
 }
-#active.housesquare{
-   --border-size: 3px;
+
+#active.housesquare {
+  --border-size: 3px;
   --border-angle: 0turn;
-  background-image: conic-gradient(
-      from var(--border-angle),
+  background-image: conic-gradient(from var(--border-angle),
       #213,
       #112 50%,
-      #213
-    ),
+      #213),
     conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
-  background-size: calc(100% - (var(--border-size) * 2))
-      calc(100% - (var(--border-size) * 2)),
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
     cover;
   background-position: center center;
   background-repeat: no-repeat;
